@@ -1,0 +1,63 @@
+let getSleepHours=(day)=>{
+  day=day.toLowerCase()
+  if(day==='monday')
+    {
+      return 8;
+    }
+  else if(day==='tuesday')
+    {
+      return 9;
+    }
+  else if(day==='wednesday')
+    {
+      return 10;
+    }
+  else if(day==='thurssday')
+    {
+      return 11;
+    }
+  else if(day==='friday')
+    {
+      return 12;
+    }
+  else if(day==='saturday')
+    {
+      return 13;
+    }
+  else if(day==='sunday')
+    {
+      return 14;
+    }
+}
+//as there is no argument and a single line statement so it can be written without using curly braces and return statement
+const getActualSleepHours= () => {
+return getSleepHours('Monday')+getSleepHours('Tuesday')+getSleepHours('Wednesday')+getSleepHours('Thursday')+getSleepHours('friday')+getSleepHours('saturday')+getSleepHours('sunday');
+}
+
+
+console.log("hjk"+getActualSleepHours());
+console.log(getSleepHours('Monday'))
+const getIdealSleepHours=()=>
+{
+  const idealHours=5
+  return idealHours*7
+  //multiply by 7 as a week to prefer
+}
+let calculateSleepDebt=()=>
+{
+  const actualSleepHours=getActualSleepHours();
+  const idealSleepHours=getIdealSleepHours();
+  console.log(actualSleepHours)
+  if(actualSleepHours===idealSleepHours)
+    {
+      console.log('user got perfect amount to sleep')
+    }
+  else if(actualSleepHours>idealSleepHours)
+    {
+      console.log('user got more sleep than needed')
+    }
+  else if (actualSleepHours < idealSleepHours) {
+  console.log('You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) less sleep than you needed this week. Get some rest.');
+}
+}
+calculateSleepDebt()
