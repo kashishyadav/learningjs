@@ -13,6 +13,7 @@ const getUserChoice=userInput=>{
 //argument there is no need to put parenthesis
 //getUserChoice('rock')
 //function call by using a variable and passing required arguemnt in it
+//arrow function
 getComputerChoice= ()=>
 {
   let choice=''
@@ -34,7 +35,8 @@ getComputerChoice= ()=>
 }
 //console.log(getComputerChoice())
 //check the value get by computer
-determineWinner=function(userChoice,computerChoice){
+
+determineWinner=function(userChoice,computerChoice){//anonymous function
   if(userChoice===computerChoice)
    {  
      return 'The game is a tie!'
@@ -78,7 +80,7 @@ determineWinner=function(userChoice,computerChoice){
     }
   }
 }
-function playGame()
+function playGame()//normal function
 {
   let userChoice=getUserChoice('bomb')
  let computerChoice=getComputerChoice()
