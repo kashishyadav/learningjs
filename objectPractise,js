@@ -1,0 +1,62 @@
+let team={
+  _games:[{
+  opponent: 'peter',
+  teamPoints: 42,
+  opponentPoints: 27
+},
+{
+  opponent: 'pete',
+  teamPoints: 43,
+  opponentPoints: 20
+},{
+  opponent: 'kashish',
+  teamPoints: 92,
+  opponentPoints: 26
+}],
+  _players:[{
+      firstName: 'Pete', 
+      lastName: 'Wheeler', 
+      age: 54
+    },
+    {
+      firstName: 'kashish', 
+      lastName: 'Wheeler', 
+      age: 50
+    },
+    {
+      firstName: 'Peter', 
+      lastName: 'Wheeler', 
+      age: 58
+    }],
+    get players(){
+      return this._players;
+    },
+    get games(){
+      return this._games;
+    },
+    addPlayer(firstName,lastName,age){
+      let player={
+         firstName: firstName,
+      lastName: lastName,
+      age: age
+      };
+      this._players.push(player)
+    },
+    addGame(opp, myPts, oppPts)
+    {
+      let game={
+         opponent: opp,
+      teamPoints: myPts,
+      opponentPoints: oppPts
+      };
+          this._games.push(game);
+    },
+
+};
+team.addPlayer('ankit','singh',24)
+team.addPlayer('ankita','singh',44)
+console.log(team._players)
+team.addGame('Titans', 100, 98);
+team.addGame('Tilak', 10, 68);
+team.addGame('Titys', 70, 88);
+console.log(team._games)
