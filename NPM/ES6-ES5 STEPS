@@ -33,3 +33,4 @@ Create a .babelrc file inside your project and add the following code inside it:
 Add the following script to your scripts object in package.json:
 "build": "babel src -d lib"
 Run npm run build whenever you want to transpile your code from your src to lib directories.
+//https://gist.github.com/codecademydev/22e1b7a7822236e2b21f4d7e9c176ffd
