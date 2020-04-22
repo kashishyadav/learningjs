@@ -12,6 +12,7 @@ MessageMixer.countCharacter=function(inputString, inputCharacter) {
 };
 
 MessageMixer.capitalizeFirstCharacterOfWords=function(string) {
+  
   let arr = string.split(" ");  
     for (let i = 0; i < arr.length; i++) {  
       let word = arr[i];
